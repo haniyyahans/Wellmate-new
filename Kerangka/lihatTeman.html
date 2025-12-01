@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellMate - Aktivitas Teman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg flex flex-col">
+            <!-- Logo -->
+            <div class="py-5">
+                <a href="index.html" class="-mt-[50px] -mb-[25px] flex items-center no-underline">
+                    <img src="/assets/logoWellmate.jpg" alt="WellMate Logo" class="h-[140px] -mr-10 -ml-8">
+                    <span class="text-[1.4em] text-gray-700 font-bold pb-[15px]">WellMate</span>
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="berandapage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Beranda</span>
+                </a>
+
+                <a href="tracking.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-glass-water"></i>
+                    <span>Tracking Minum</span>
+                </a>
+
+                <a href="saran.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-running"></i>
+                    <span>Saran Aktivitas</span>
+                </a>
+
+                <a href="laporandanAnalisis.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Laporan dan Analisis</span>
+                </a>
+
+                <a href="beritaEdukasi.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Berita dan Edukasi</span>
+                </a>
+
+                <a href="lihatTeman.html" class="flex items-center space-x-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg">
+                    <i class="fas fa-users"></i>
+                    <span class="font-medium">Teman</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </nav>
+
+            <!-- Logout -->
+            <div class="p-3 no-underline">
+                <a href="signinpage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                    </svg>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Konten Utama -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white shadow-sm px-8 py-4 flex justify-between items-center">
+                <div></div>
+                <div class="flex items-center space-x-4">
+                    <!-- Ikon Notifikasi -->
+                    <div class="relative">
+                        <a href="notifikasi.html" class="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">6</span>
+                        </a>
+                    </div>
+                    <!-- Foto Profil -->
+                    <div class="w-10 h-10 bg-blue-400 rounded-full overflow-hidden flex items-center justify-center">
+                        <img src="/assets/fotoProfil.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto bg-blue-100 p-6"> 
+                <!-- Area Konten -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <!-- Judul Halaman dan Aksi -->
+                    <div class="flex justify-between items-center mb-8">
+                        <h1 class="text-4xl font-bold text-gray-600">Aktivitas Teman</h1>
+                        <div class="flex space-x-3">
+                            <a href="tambahTeman.html" class="flex items-center space-x-2 px-6 py-3 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition">
+                                <i class="fas fa-user-plus"></i>
+                                <span class="font-semibold">Tambah Teman</span>
+                            </a>
+                            <a href="updateTeman.html" class="relative p-3 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition">
+                                <i class="fas fa-users text-xl"></i>
+                                <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">5</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Daftar Aktivitas Teman -->
+                    <div  iv class="space-y-4" id="friendsList">
+                        <!-- Item Teman 1 -->
+                        <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                    <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Lihat Detail</span>
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="p-3 text-red-500 hover:bg-red-50 rounded-lg transition delete-friend-btn">
+                                    <i class="fas fa-trash text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Item Teman 2 -->
+                        <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                    <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Lihat Detail</span>
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="p-3 text-red-500 hover:bg-red-50 rounded-lg transition delete-friend-btn">
+                                    <i class="fas fa-trash text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Item Teman 3 -->
+                        <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                    <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Lihat Detail</span>
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="p-3 text-red-500 hover:bg-red-50 rounded-lg transition delete-friend-btn">
+                                    <i class="fas fa-trash text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Item Teman 4 -->
+                        <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                    <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Lihat Detail</span>
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="p-3 text-red-500 hover:bg-red-50 rounded-lg transition delete-friend-btn">
+                                    <i class="fas fa-trash text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Item Teman 5 -->
+                        <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                    <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Lihat Detail</span>
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <button class="p-3 text-red-500 hover:bg-red-50 rounded-lg transition delete-friend-btn">
+                                    <i class="fas fa-trash text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Jika belum ada teman (tersembunyi secara default) -->
+                        <div id="emptyState" class="hidden text-center py-16">
+                            <i class="fas fa-users text-gray-300 text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-400 mb-2">Belum Ada Teman</h3>
+                            <p class="text-gray-400 mb-6">Tambahkan teman untuk melihat aktivitas mereka</p>
+                            <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+                                <i class="fas fa-user-plus mr-2"></i>
+                                Tambah Teman
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+            
+    </div>
+
+    <!-- Modal Konfirmasi Hapus -->
+    <div id="deleteModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl transform transition-all">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-times text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-700 mb-2">Hapus Teman?</h3>
+                <p class="text-gray-600 mb-6">Apakah Anda yakin ingin menghapus <span id="friendNameToDelete" class="font-semibold"></span> dari daftar teman?</p>
+                <div class="flex space-x-3">
+                    <button id="cancelDelete" class="flex-1 px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-semibold">
+                        Batal
+                    </button>
+                    <button id="confirmDelete" class="flex-1 px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition font-semibold">
+                        Hapus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let friendToDelete = null;
+
+        // Delete friend functionality
+        document.querySelectorAll('.delete-friend-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                friendToDelete = this.closest('.friend-item');
+                const friendName = friendToDelete.querySelector('h3').textContent;
+                
+                // Show modal
+                document.getElementById('friendNameToDelete').textContent = friendName;
+                document.getElementById('deleteModal').classList.remove('hidden');
+            });
+        });
+
+        // Batal hapus
+        document.getElementById('cancelDelete').addEventListener('click', function() {
+            document.getElementById('deleteModal').classList.add('hidden');
+            friendToDelete = null;
+        });
+
+        // Konfirmasi hapus
+        document.getElementById('confirmDelete').addEventListener('click', function() {
+            if (friendToDelete) {
+                // Animasi hapus
+                friendToDelete.style.transition = 'all 0.5s ease';
+                friendToDelete.style.transform = 'translateX(-100%)';
+                friendToDelete.style.opacity = '0';
+                
+                setTimeout(() => {
+                    friendToDelete.remove();
+                    friendToDelete = null;
+                    
+                    // Cek jika tidak ada teman lagi
+                    checkEmptyState();
+                }, 500);
+                
+                // Sembunyikan modal
+                document.getElementById('deleteModal').classList.add('hidden');
+                
+                // Tampilkan notifikasi sukses
+                showNotification('Teman berhasil dihapus', 'success');
+            }
+        });
+
+        // Tutup modal saat mengklik di luar modal
+        document.getElementById('deleteModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+                friendToDelete = null;
+            }
+        });
+
+        // Cek jika daftar teman kosong
+        function checkEmptyState() {
+            const friendsList = document.getElementById('friendsList');
+            const emptyState = document.getElementById('emptyState');
+            const friendItems = friendsList.querySelectorAll('.friend-item');
+            
+            if (friendItems.length === 0) {
+                friendsList.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+            }
+        }
+
+        // Tampilkan notifikasi
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-4 rounded-lg shadow-lg text-white font-semibold z-50 transform transition-all duration-300 ${type === 'success' ? 'bg-green-500' : 'bg-red-500'}`;
+            notification.innerHTML = `
+                <i class="fas fa-check-circle mr-2"></i>
+                ${message}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animasi masuk
+            setTimeout(() => {
+                notification.style.transform = 'translateY(0)';
+            }, 10);
+            
+            // Hapus setelah 3 detik
+            setTimeout(() => {
+                notification.style.transform = 'translateY(-100px)';
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Tombol Lihat Profil
+        document.querySelectorAll('.bg-blue-500.text-white').forEach(btn => {
+            if (btn.textContent.includes('Lihat Profil')) {
+                btn.addEventListener('click', function() {
+                    const friendName = this.closest('.friend-item').querySelector('h3').textContent;
+                    showNotification(`Membuka profil ${friendName}`, 'success');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

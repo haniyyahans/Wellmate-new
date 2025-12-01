@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellMate - Notifikasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg flex flex-col">
+            <!-- Logo -->
+            <div class="py-5">
+                <a href="index.html" class="-mt-[50px] -mb-[25px] flex items-center no-underline">
+                    <img src="/assets/logoWellmate.jpg" alt="WellMate Logo" class="h-[140px] -mr-10 -ml-8">
+                    <span class="text-[1.4em] text-gray-700 font-bold pb-[15px]">WellMate</span>
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="berandapage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Beranda</span>
+                </a>
+
+                <a href="tracking.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-glass-water"></i>
+                    <span>Tracking Minum</span>
+                </a>
+
+                <a href="saran.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-running"></i>
+                    <span>Saran Aktivitas</span>
+                </a>
+
+                <a href="laporandanAnalisis.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Laporan dan Analisis</span>
+                </a>
+
+                <a href="beritaEdukasi.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Berita dan Edukasi</span>
+                </a>
+
+                <a href="lihatTeman.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-users"></i>
+                    <span>Teman</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </nav>
+
+            <!-- Logout -->
+            <div class="p-3 no-underline">
+                <a href="signinpage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                    </svg>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Konten Utama -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white shadow-sm px-8 py-4 flex justify-between items-center">
+                <div></div>
+                <div class="flex items-center space-x-4">
+                    <!-- Ikon Notifikasi -->
+                    <div class="relative">
+                        <a href="notifikasi.html" class="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">6</span>
+                        </a>
+                    </div>
+                    <!-- Foto Profil -->
+                    <div class="w-10 h-10 bg-blue-400 rounded-full overflow-hidden flex items-center justify-center">
+                        <img src="/assets/fotoProfil.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto">    
+                <!-- Area Konten -->
+                <div class="p-8 bg-blue-100 min-h-full">
+                    <div class="max-w-6xl">
+                        <!-- Judul Halaman -->
+                        <h1 class="text-4xl font-bold text-gray-600 mb-8">Notifikasi</h1>
+
+                        <!-- Daftar Notifikasi -->
+                        <div class="space-y-4">
+                            <!-- Item Notifikasi 1 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex items-start justify-between">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600 mb-1">Mimi</h3>
+                                        <p class="text-gray-600">Yay! Mimi sekarang sudah jadi temanmu 😊</p>
+                                    </div>
+                                </div>
+                                <span class="text-gray-500 text-sm whitespace-nowrap ml-4">22 menit lalu</span>
+                            </div>
+
+                            <!-- Item Notifikasi 2 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex items-start justify-between">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600 mb-1">Jangan lupa minum hari ini!</h3>
+                                        <p class="text-gray-600">Hmm..kamu belum minum sejak beberapa waktu lalu, yuk minum dulu!</p>
+                                    </div>
+                                </div>
+                                <span class="text-gray-500 text-sm whitespace-nowrap ml-4">25 menit lalu</span>
+                            </div>
+
+                            <!-- Item Notifikasi 3 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex items-start justify-between">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600 mb-1">Jangan lupa minum hari ini!</h3>
+                                        <p class="text-gray-600">Hmm..kamu belum minum sejak beberapa waktu lalu, yuk minum dulu!</p>
+                                    </div>
+                                </div>
+                                <span class="text-gray-500 text-sm whitespace-nowrap ml-4">2 jam lalu</span>
+                            </div>
+
+                            <!-- Item Notifikasi 4 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex items-start justify-between">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600 mb-1">Jangan lupa minum hari ini!</h3>
+                                        <p class="text-gray-600">Hmm..kamu belum minum sejak beberapa waktu lalu, yuk minum dulu!</p>
+                                    </div>
+                                </div>
+                                <span class="text-gray-500 text-sm whitespace-nowrap ml-4">12 jam lalu</span>
+                            </div>
+
+                            <!-- Item Notifikasi 5 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex items-start justify-between">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600 mb-1">Jangan lupa minum hari ini!</h3>
+                                        <p class="text-gray-600">Hmm..kamu belum minum sejak beberapa waktu lalu, yuk minum dulu!</p>
+                                    </div>
+                                </div>
+                                <span class="text-gray-500 text-sm whitespace-nowrap ml-4">19 jam lalu</span>
+                            </div>
+
+                            <!-- Item Notifikasi 6 -->
+                            <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex items-start justify-between">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600 mb-1">Jangan lupa minum hari ini!</h3>
+                                        <p class="text-gray-600">Hmm..kamu belum minum sejak beberapa waktu lalu, yuk minum dulu!</p>
+                                    </div>
+                                </div>
+                                <span class="text-gray-500 text-sm whitespace-nowrap ml-4">2 hari lalu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div> 
+    </div>
+
+    <script>
+        // Tandai notifikasi sebagai sudah dibaca saat diklik
+        document.querySelectorAll('.bg-white.rounded-2xl').forEach(notification => {
+            notification.addEventListener('click', function() {
+                this.style.backgroundColor = '#f3f4f6';
+                this.style.opacity = '0.7';
+            });
+        });
+
+        // Pembaruan badge notifikasi
+        const notificationBadge = document.querySelector('.bg-red-500');
+        const notifications = document.querySelectorAll('.bg-white.rounded-2xl');
+        
+        notifications.forEach((notif, index) => {
+            notif.addEventListener('click', function() {
+                // Kurangi jumlah badge
+                const currentCount = parseInt(notificationBadge.textContent);
+                if (currentCount > 0) {
+                    notificationBadge.textContent = currentCount - 1;
+                    
+                    // Hide badge if count is 0
+                    if (currentCount - 1 === 0) {
+                        notificationBadge.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

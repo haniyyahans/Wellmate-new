@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellMate - Tambah Teman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg flex flex-col">
+            <!-- Logo -->
+            <div class="py-5">
+                <a href="index.html" class="-mt-[50px] -mb-[25px] flex items-center no-underline">
+                    <img src="/assets/logoWellmate.jpg" alt="WellMate Logo" class="h-[140px] -mr-10 -ml-8">
+                    <span class="text-[1.4em] text-gray-700 font-bold pb-[15px]">WellMate</span>
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="berandapage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Beranda</span>
+                </a>
+
+                <a href="tracking.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-glass-water"></i>
+                    <span>Tracking Minum</span>
+                </a>
+
+                <a href="saran.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-running"></i>
+                    <span>Saran Aktivitas</span>
+                </a>
+
+                <a href="laporandanAnalisis.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Laporan dan Analisis</span>
+                </a>
+
+                <a href="beritaEdukasi.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Berita dan Edukasi</span>
+                </a>
+
+                <a href="lihatTeman.html" class="flex items-center space-x-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg">
+                    <i class="fas fa-users"></i>
+                    <span class="font-medium">Teman</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </nav>
+
+            <!-- Logout -->
+            <div class="p-3 no-underline">
+                <a href="signinpage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                    </svg>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Konten Utama -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white shadow-sm px-8 py-4 flex justify-between items-center">
+                <div></div>
+                <div class="flex items-center space-x-4">
+                    <!-- Ikon Notifikasi -->
+                    <div class="relative">
+                        <a href="notifikasi.html" class="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">6</span>
+                        </a>
+                    </div>
+                    <!-- Foto Profil -->
+                    <div class="w-10 h-10 bg-blue-400 rounded-full overflow-hidden flex items-center justify-center">
+                        <img src="/assets/fotoProfil.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto">
+                <!-- Area Konten -->
+                <div class="p-8 bg-blue-100 min-h-full">
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <!-- Search Bar and Friend Requests Button -->
+                        <div class="flex items-center space-x-4 mb-8">
+                            <!-- Search Bar -->
+                            <div class="flex-1 relative">
+                                <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+                                    <i class="fas fa-search text-gray-500 text-xl"></i>
+                                </div>
+                                <input 
+                                    type="text" 
+                                    placeholder="Cari" 
+                                    class="w-full pl-16 pr-6 py-4 bg-blue-100 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+                                >
+                            </div>
+                            
+                            <!-- Friend Requests Button -->
+                            <a href="updateTeman.html" class="relative p-4 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition">
+                                <i class="fas fa-users text-2xl"></i>
+                                <span class="absolute -top-1 -right-1 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-semibold">5</span>
+                            </a>
+                        </div>
+
+                        <!-- Friend Suggestions List -->
+                        <div class="space-y-4">
+                            <!-- Friend Suggestion Item 1 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item" data-name="Mimi" data-username="mimi123">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Tambah Teman</span>
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </div>
+
+                            <!-- Friend Suggestion Item 2 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item" data-name="Yumi" data-username="yumi123">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Yumi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Tambah Teman</span>
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </div>
+
+                            <!-- Friend Suggestion Item 3 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item" data-name="Ami" data-username="ami123">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Ami</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Tambah Teman</span>
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </div>
+
+                            <!-- Friend Suggestion Item 4 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item" data-name="Timi" data-username="timi123">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Timi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Tambah Teman</span>
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </div>
+
+                            <!-- Friend Suggestion Item 5 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition friend-item" data-name="Tami" data-username="tami123">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Tami</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition flex items-center space-x-2 font-semibold">
+                                    <span>Tambah Teman</span>
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.querySelector('input[type="text"]');
+        const friendItems = document.querySelectorAll('.friend-item');
+
+        searchInput.addEventListener('input', function (e) {
+            const searchValue = e.target.value.toLowerCase();
+
+            friendItems.forEach(item => {
+                const name = item.getAttribute('data-name').toLowerCase();
+                const username = item.getAttribute('data-username').toLowerCase();
+
+                if (name.includes(searchValue) || username.includes(searchValue)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Add Friend button functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Tambah Teman')) {
+                button.addEventListener('click', function() {
+                    this.innerHTML = '<span>Permintaan Pertemanan Terkirim</span><i class="fas fa-check ml-2"></i>';
+                    this.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+                    this.classList.add('bg-green-500', 'hover:bg-green-600');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

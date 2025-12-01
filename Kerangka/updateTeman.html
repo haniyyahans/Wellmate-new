@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellMate - Permintaan Pertemanan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg flex flex-col">
+            <!-- Logo -->
+            <div class="py-5">
+                <a href="index.html" class="-mt-[50px] -mb-[25px] flex items-center no-underline">
+                    <img src="/assets/logoWellmate.jpg" alt="WellMate Logo" class="h-[140px] -mr-10 -ml-8">
+                    <span class="text-[1.4em] text-gray-700 font-bold pb-[15px]">WellMate</span>
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="berandapage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Beranda</span>
+                </a>
+
+                <a href="tracking.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-glass-water"></i>
+                    <span>Tracking Minum</span>
+                </a>
+
+                <a href="saran.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-running"></i>
+                    <span>Saran Aktivitas</span>
+                </a>
+
+                <a href="laporandanAnalisis.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Laporan dan Analisis</span>
+                </a>
+
+                <a href="beritaEdukasi.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Berita dan Edukasi</span>
+                </a>
+
+                <a href="lihatTeman.html" class="flex items-center space-x-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg">
+                    <i class="fas fa-users"></i>
+                    <span class="font-medium">Teman</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan</span>
+                </a>
+            </nav>
+
+            <!-- Logout -->
+            <div class="p-3 no-underline">
+                <a href="signinpage.html" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                    </svg>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white shadow-sm px-8 py-4 flex justify-between items-center">
+                <div></div>
+                <div class="flex items-center space-x-4">
+                    <!-- Notification Icon -->
+                    <div class="relative">
+                        <a href="notifikasi.html" class="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">6</span>
+                        </a>
+                    </div>
+                    <!-- Profile Picture -->
+                    <div class="w-10 h-10 bg-blue-400 rounded-full overflow-hidden flex items-center justify-center">
+                        <img src="/assets/fotoProfil.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto">
+                <!-- Content Area -->
+                <div class="p-8 bg-blue-100 min-h-full">
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <!-- Page Title and Actions -->
+                        <div class="flex justify-between items-center mb-8">
+                            <h1 class="text-4xl font-bold text-gray-600">Permintaan Pertemanan</h1>
+                            <div class="flex space-x-3">
+                                <a href="tambahTeman.html" class="flex items-center space-x-2 px-6 py-3 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span class="font-semibold">Tambah Teman</span>
+                                </a>
+                                <a href="updateTeman.html" class="relative p-3 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition">
+                                    <i class="fas fa-users text-xl"></i>
+                                    <span id="requestBadge" class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">5</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Friend Requests List -->
+                        <div class="space-y-4" id="requestsList">
+                            <!-- Friend Request Item 1 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition request-item">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="px-6 py-3 bg-white text-blue-500 border-2 border-blue-500 rounded-lg hover:bg-blue-50 transition font-semibold delete-btn">
+                                        Tolak
+                                    </button>
+                                    <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition font-semibold confirm-btn">
+                                        Terima
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Friend Request Item 2 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition request-item">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="px-6 py-3 bg-white text-blue-500 border-2 border-blue-500 rounded-lg hover:bg-blue-50 transition font-semibold delete-btn">
+                                        Tolak
+                                    </button>
+                                    <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition font-semibold confirm-btn">
+                                        Terima
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Friend Request Item 3 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition request-item">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="px-6 py-3 bg-white text-blue-500 border-2 border-blue-500 rounded-lg hover:bg-blue-50 transition font-semibold delete-btn">
+                                        Tolak
+                                    </button>
+                                    <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition font-semibold confirm-btn">
+                                        Terima
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Friend Request Item 4 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition request-item">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="px-6 py-3 bg-white text-blue-500 border-2 border-blue-500 rounded-lg hover:bg-blue-50 transition font-semibold delete-btn">
+                                        Tolak
+                                    </button>
+                                    <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition font-semibold confirm-btn">
+                                        Terima
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Friend Request Item 5 -->
+                            <div class="flex items-center justify-between p-4 hover:bg-gray-50 rounded-xl transition request-item">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-white text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-600">Mimi</h3>
+                                        <p class="text-gray-500">Telah meminum 2,05L dari 2,5L target hariannya</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="px-6 py-3 bg-white text-blue-500 border-2 border-blue-500 rounded-lg hover:bg-blue-50 transition font-semibold delete-btn">
+                                        Tolak
+                                    </button>
+                                    <button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition font-semibold confirm-btn">
+                                        Terima
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Empty State (hidden by default) -->
+                        <div id="emptyState" class="hidden text-center py-16">
+                            <i class="fas fa-user-check text-gray-300 text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-400 mb-2">Tidak Ada Permintaan Pertemanan</h3>
+                            <p class="text-gray-400 mb-6">Saat ini tidak ada permintaan pertemanan baru</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal Konfirmasi Delete -->
+    <div id="deleteModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl transform transition-all">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-times text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-700 mb-2">Tolak Permintaan?</h3>
+                <p class="text-gray-600 mb-6">Apakah Anda yakin ingin menolak permintaan pertemanan dari <span id="friendNameToDelete" class="font-semibold"></span>?</p>
+                <div class="flex space-x-3">
+                    <button id="cancelDelete" class="flex-1 px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-semibold">
+                        Batal
+                    </button>
+                    <button id="confirmDelete" class="flex-1 px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition font-semibold">
+                        Tolak
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Konfirmasi Confirm -->
+    <div id="confirmModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl transform transition-all">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-700 mb-2">Terima Permintaan?</h3>
+                <p class="text-gray-600 mb-6">Apakah Anda yakin ingin menerima permintaan pertemanan dari <span id="friendNameToConfirm" class="font-semibold"></span>?</p>
+                <div class="flex space-x-3">
+                    <button id="cancelConfirm" class="flex-1 px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-semibold">
+                        Batal
+                    </button>
+                    <button id="confirmAccept" class="flex-1 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition font-semibold">
+                        Terima
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let requestToDelete = null;
+        let requestToConfirm = null;
+
+        // Delete button functionality
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                requestToDelete = this.closest('.request-item');
+                const friendName = requestToDelete.querySelector('h3').textContent;
+                
+                // Show modal
+                document.getElementById('friendNameToDelete').textContent = friendName;
+                document.getElementById('deleteModal').classList.remove('hidden');
+            });
+        });
+
+        // Confirm button functionality
+        document.querySelectorAll('.confirm-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                requestToConfirm = this.closest('.request-item');
+                const friendName = requestToConfirm.querySelector('h3').textContent;
+                
+                // Show modal
+                document.getElementById('friendNameToConfirm').textContent = friendName;
+                document.getElementById('confirmModal').classList.remove('hidden');
+            });
+        });
+
+        // Cancel delete
+        document.getElementById('cancelDelete').addEventListener('click', function() {
+            document.getElementById('deleteModal').classList.add('hidden');
+            requestToDelete = null;
+        });
+
+        // Cancel confirm
+        document.getElementById('cancelConfirm').addEventListener('click', function() {
+            document.getElementById('confirmModal').classList.add('hidden');
+            requestToConfirm = null;
+        });
+
+        // Confirm delete (reject request)
+        document.getElementById('confirmDelete').addEventListener('click', function() {
+            if (requestToDelete) {
+                const friendName = requestToDelete.querySelector('h3').textContent;
+                
+                // Add delete animation
+                requestToDelete.style.transition = 'all 0.5s ease';
+                requestToDelete.style.transform = 'translateX(-100%)';
+                requestToDelete.style.opacity = '0';
+                
+                setTimeout(() => {
+                    requestToDelete.remove();
+                    requestToDelete = null;
+                    
+                    // Update badge and check empty state
+                    updateBadgeCount();
+                    checkEmptyState();
+                }, 500);
+                
+                // Hide modal
+                document.getElementById('deleteModal').classList.add('hidden');
+                
+                // Show notification
+                showNotification(`Permintaan pertemanan dari ${friendName} ditolak`, 'error');
+            }
+        });
+
+        // Confirm accept (accept request)
+        document.getElementById('confirmAccept').addEventListener('click', function() {
+            if (requestToConfirm) {
+                const friendName = requestToConfirm.querySelector('h3').textContent;
+                
+                // Add success animation
+                requestToConfirm.style.transition = 'all 0.5s ease';
+                requestToConfirm.style.transform = 'scale(1.05)';
+                requestToConfirm.style.backgroundColor = '#dcfce7';
+                
+                setTimeout(() => {
+                    requestToConfirm.style.transform = 'translateX(100%)';
+                    requestToConfirm.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        requestToConfirm.remove();
+                        requestToConfirm = null;
+                        
+                        // Update badge and check empty state
+                        updateBadgeCount();
+                        checkEmptyState();
+                    }, 500);
+                }, 300);
+                
+                // Hide modal
+                document.getElementById('confirmModal').classList.add('hidden');
+                
+                // Show notification
+                showNotification(`${friendName} sekarang adalah teman Anda!`, 'success');
+            }
+        });
+
+        // Close modals when clicking outside
+        document.getElementById('deleteModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+                requestToDelete = null;
+            }
+        });
+
+        document.getElementById('confirmModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+                requestToConfirm = null;
+            }
+        });
+
+        // Update badge count
+        function updateBadgeCount() {
+            const remainingRequests = document.querySelectorAll('.request-item').length;
+            const badge = document.getElementById('requestBadge');
+            
+            if (remainingRequests > 0) {
+                badge.textContent = remainingRequests;
+            } else {
+                badge.style.display = 'none';
+            }
+        }
+
+        // Check if requests list is empty
+        function checkEmptyState() {
+            const requestsList = document.getElementById('requestsList');
+            const emptyState = document.getElementById('emptyState');
+            const requestItems = requestsList.querySelectorAll('.request-item');
+            
+            if (requestItems.length === 0) {
+                requestsList.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+            }
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            const bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500';
+            const icon = type === 'success' ? 'fa-check-circle' : 'fa-times-circle';
+            
+            notification.className = `fixed top-4 right-4 px-6 py-4 rounded-lg shadow-lg text-white font-semibold z-50 transform transition-all duration-300 ${bgColor}`;
+            notification.style.transform = 'translateY(-100px)';
+            notification.style.opacity = '0';
+            notification.innerHTML = `
+                <i class="fas ${icon} mr-2"></i>
+                ${message}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateY(0)';
+                notification.style.opacity = '1';
+            }, 10);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateY(-100px)';
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
